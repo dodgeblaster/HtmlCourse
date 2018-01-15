@@ -1,0 +1,18 @@
+/* * * * * * * * * * * * * * * * *
+Base
+* * * * * * * * * * * * * * * * */
+.wrapper {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1000px;
+    padding-top: 100px;
+}
+
+a {
+    padding: 10px 20px;
+    background: #09c;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}

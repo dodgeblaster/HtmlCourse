@@ -1,0 +1,152 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
+
+/* ROOT FONT STYLES */
+
+* {
+  font-family: 'Lato', Helvetica, sans-serif;
+  color: #333447;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+.blue {
+    padding: 40px;
+    background-color: #2ab;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * *
+Row
+* * * * * * * * * * * * * * * * * * */
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+/* first lets make out row class, we are just going
+to give it a width of 100%,
+so its always stretching that far */
+.row {
+  width: 100%;
+}
+/*
+Now we are going to make a column class,
+this is where we define that it floats to the left,
+it has margin, so 2% gutter
+
+*/
+.row .column {
+  float: left;
+  margin: 10px 1%;
+}
+
+/*
+one of the big reasons we want a row class,
+is so we can inject a clearfix at the end of it all the time,
+
+so all our float elements are always going to get cleared
+*/
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/*
+so ... we want 12 divisions, so if we divide 100 by 12...
+we get 8.3333332
+
+if we want there to be 1% margin on both sides of each column, we take away 2,
+so now thats 6.3333332
+
+so each column is 6.333332 percent big
+we have already given each column 1% margin on both sides, so that takes care of that
+
+now lets calculate the grid.
+
+lets do that with a js script!
+*/
+
+/* * * * * * * * * * * * * * * * * * *
+Columns
+* * * * * * * * * * * * * * * * * * */
+.small-1   { width: 6.333333333333334%;     }
+.small-2   { width: 14.666666666666668%;    }
+.small-3   { width: 23%;                    }
+.small-4   { width: 31.333333333333336%;    }
+.small-5   { width: 39.66666666666667%;     }
+.small-6   { width: 48.00000000000001%;     }
+.small-7   { width: 56.333333333333336%;    }
+.small-8   { width: 64.66666666666667%;     }
+.small-9   { width: 73%;                    }
+.small-10  { width: 81.33333333333333%;     }
+.small-11  { width: 89.66666666666667%;     }
+.small-12  { width: 98%;                    }
+
+@media only screen and (min-width: 720px) {  /* 720px */
+    .medium-1   { width: 6.333333333333334%;     }
+    .medium-2   { width: 14.666666666666668%;    }
+    .medium-3   { width: 23%;                    }
+    .medium-4   { width: 31.333333333333336%;    }
+    .medium-5   { width: 39.66666666666667%;     }
+    .medium-6   { width: 48.00000000000001%;     }
+    .medium-7   { width: 56.333333333333336%;    }
+    .medium-8   { width: 64.66666666666667%;     }
+    .medium-9   { width: 73%;                    }
+    .medium-10  { width: 81.33333333333333%;     }
+    .medium-11  { width: 89.66666666666667%;     }
+    .medium-12  { width: 98%;                    }
+}
+
+@media only screen and (min-width: 1040px) {  /* 720px */
+    .large-1   { width: 6.333333333333334%;     }
+    .large-2   { width: 14.666666666666668%;    }
+    .large-3   { width: 23%;                    }
+    .large-4   { width: 31.333333333333336%;    }
+    .large-5   { width: 39.66666666666667%;     }
+    .large-6   { width: 48.00000000000001%;     }
+    .large-7   { width: 56.333333333333336%;    }
+    .large-8   { width: 64.66666666666667%;     }
+    .large-9   { width: 73%;                    }
+    .large-10  { width: 81.33333333333333%;     }
+    .large-11  { width: 89.66666666666667%;     }
+    .large-12  { width: 98%;                    }
+}
+
+
+
+
+/* * * * * * * * * * * * * * * * * * *
+Visibility Classes
+* * * * * * * * * * * * * * * * * * */
+
+.visible-for-small-only {
+    display: block;
+}
+
+.visible-for-medium-up {
+    display: none;
+}
+
+.visible-for-large-up {
+    display: none;
+}
+
+@media only screen and (min-width: 720px) {  /* 720px */
+    .visible-for-small-only {
+        display: none;
+    }
+
+    .visible-for-medium-up {
+        display: block;
+    }
+
+}
+
+@media only screen and (min-width: 1040px) {  /* 720px */
+    .visible-for-large-up {
+        display: block;
+    }
+}

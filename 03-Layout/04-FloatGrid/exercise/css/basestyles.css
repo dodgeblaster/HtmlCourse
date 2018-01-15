@@ -1,0 +1,73 @@
+/* * * * * * * * * * * * * * * * * * * * * * *
+Base Styles
+* * * * * * * * * * * * * * * * * * * * * * */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #232429;
+	margin: 20px 0;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 80%;
+	max-width: 1000px;
+}
+
+p {
+	opacity: 0.6;
+	text-transform: uppercase;
+	font-size: 0.7em;
+	font-weight: bold;
+	margin-top: 0;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * *
+Section Styles
+* * * * * * * * * * * * * * * * * * * * * * */
+
+header,
+.hero,
+.service,
+.main,
+.secondary,
+footer {
+	margin-bottom: 20px;
+	border-radius: 5px;
+	padding: 15px;
+}
+
+header {
+	background: #d92241;
+	min-height: 100px;
+}
+
+.hero {
+	background: white;
+	height: 400px;
+}
+
+.service {
+	background: #1b8;
+	height: 200px;
+}
+
+.main {
+	background: #a39449;
+	height: 400px;
+}
+
+.secondary {
+	background: #4394f9;
+	height: 400px;
+}
+
+footer {
+	background: #434449;
+	height: 300px;
+}

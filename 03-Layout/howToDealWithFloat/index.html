@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+    <body>
+        <div class="wrapper">
+
+            <h1>How to deal with floats</h1>
+            <hr>
+
+            <h2>A Paragraph Tag</h2>
+            <div class="container">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+
+            <h2>1 Float and a Paragraph Tag</h2>
+            <div class="container">
+                <div class="box"></div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+
+
+
+            <h2>3 Blocks</h2>
+            <div class="container">
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+            </div>
+
+
+            <h2>1 Float and 2 Blocks</h2>
+            <div class="container">
+                <div class="box"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+            </div>
+
+
+            <h2>3 Inline-Blocks</h2>
+            <div class="container">
+                <div class="inline-block"></div>
+                <div class="inline-block"></div>
+                <div class="inline-block"></div>
+            </div>
+
+
+            <h2>1 Float and 2 Inline-Blocks</h2>
+            <div class="container">
+                <div class="box"></div>
+                <div class="inline-block"></div>
+                <div class="inline-block"></div>
+            </div>
+
+
+            <h2>1 Float and a container of 2 Inline-Blocks</h2>
+            <div class="container">
+                <div class="box"></div>
+                <div class="container-of-inline-blocks">
+                    <div class="inline-block"></div>
+                    <div class="inline-block"></div>
+                </div>
+            </div>
+
+            <h2>1 Float and a container with a paragraph tag</h2>
+            <div class="container">
+                <div class="box"></div>
+                <div class="container-of-inline-blocks">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="container">
+
+                <p>The nice thing about containers is that they help us think about 1 thing at a time. But what we are seeing here with floats are things outside of containers jumping in. The workflow of dealing with overall layout first (the artist drawing big circles), and then dealing with each individual container, is great. Its a good separation of concerns. If things outside any given container can make their way in, then this whole way of working breaks down. In my code, I only want things inside my container (in html) to be in my container. I dont want floats crossing that boundary and making their way in. So how do we solve this?</p>
+
+            </div>
+
+
+
+            <h2>A safer solution is to give floats their own container and have them only interact with other floats, dont let them interact with anyone else. That way things are more predictable.</h2>
+            <div class="container">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+
+
+            <h2>But of course this means they are no longer taking up any space, so we can give the container an absolute height:</h2>
+            <div class="container" style='height: 100px;'>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+
+
+            <h2>But absolute heights are dangerous, its safer to let the content define the height, so instead we give it a clear fix.</h2>
+            <div class="container clearfix">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+
+
+            <h2>As long as floats are in their own container, they can not jump out and get into other containers</h2>
+            <div class="container">
+                <div class="clearfix">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+
+                <div class="container-of-inline-blocks">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="clearfix">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+
+                <div class="container-of-inline-blocks">
+                    <div class="inline-block"></div>
+                    <div class="inline-block"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+</html>

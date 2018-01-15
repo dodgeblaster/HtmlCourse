@@ -1,0 +1,29 @@
+.static-container {
+    padding: 20px;
+    margin: 20px;
+    background: #ddd;
+    display: inline-block;
+    vertical-align: top;
+    height: 180px;
+    width: 180px;
+}
+
+.pink-box-1, .pink-box-2, .pink-box-3 {
+    height: 100px;
+    width: 100px;
+    padding: 20px;
+    background: #FF5555;
+    color: white;
+}
+
+.pink-box-1 {
+
+}
+
+.pink-box-2 {
+
+}
+
+.pink-box-3 {
+
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+    <body>
+        <div class="wrapper">
+
+            <h1>CSS Grid System</h1>
+            <hr>
+
+        </div>
+
+
+
+
+
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+        Script to calculate percentages
+        * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+        <script type="text/javascript">
+
+
+        function printStyles(size) {
+
+            const width                 = 100 / 12
+            const integerToWidth        = i => (width * i + width)
+            const widthToCssStatement   = (x, i) => `.${size}-${i + 1} { width: ${x}%; }`
+            const printStyle            = x => { return console.log(x)}
+            const printSpace            = x => { return console.log('')}
+
+            [0,1,2,3,4,5,6,7,8,9,10,11]
+                .map(integerToWidth)
+                .map(widthToCssStatement)
+                .forEach(printStyle)
+
+            printSpace()
+        }
+
+        printStyles('size', 0)
+
+        console.log('**********************************************************************************************')
+
+        printStyles('small', 0)
+        printStyles('medium', 0)
+        printStyles('large', 0)
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,28 @@
+/*
+cm	     centimeters Try it
+mm	     millimeters Try it
+in	     inches (1in = 96px = 2.54cm) Try it
+px *	 pixels (1px = 1/96th of 1in) Try it
+pt	     points (1pt = 1/72 of 1in) Try it
+pc	     picas (1pc = 12 pt)
+*/
+
+.cm {
+    font-size: 10cm;
+}
+
+.mm {
+    font-size: 10mm;
+}
+
+.in {
+    font-size: 10in;
+}
+
+.pt {
+    font-size: 10pt;
+}
+
+.pc {
+    font-size: 10pc;
+}

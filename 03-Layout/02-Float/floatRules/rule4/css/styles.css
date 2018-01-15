@@ -1,0 +1,62 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+General
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 60%;
+    max-width: 1000px;
+}
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Demonstration Styles
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+body {
+    background: #fd575a;
+}
+
+.demo-section {
+    background: #c84547;
+}
+
+.float-box {
+    background: white;
+    height: 100px;
+    width: 100px;
+    margin: 0 15px 15px 0;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Unique to Rule
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+.demo-section {
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.float-box {
+    text-align: center;
+    padding-top:30px;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.float-left {
+    float: left;
+}
+
+.thin-section {
+    height: 20px;
+    margin-bottom: 180px;
+}

@@ -1,0 +1,81 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Base
+* * * * * * * * * * * * * * * * * * * * * * * * * * * */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #2f3238;
+}
+
+.wrapper {
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Nav
+* * * * * * * * * * * * * * * * * * * * * * * * * * * */
+nav {
+    padding: 10px 0;
+    height: 80px;
+    width: 100%;
+    background: #222;
+    color: white;
+}
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Hero
+* * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.hero {
+    padding: 10px 0;
+    height: 300px;
+    width: 100%;
+    background: #ccc;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Main
+* * * * * * * * * * * * * * * * * * * * * * * * * * * */
+main {
+    padding: 10px 0;
+    height: 600px;
+    width: 100%;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Card
+* * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Footer
+* * * * * * * * * * * * * * * * * * * * * * * * * * * */
+footer {
+    padding: 10px 0;
+    background: #222;
+    height: 300px;
+    width: 100%;
+    color: white;
+}

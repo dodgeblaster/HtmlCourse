@@ -1,0 +1,22 @@
+* {
+  font-family: 'Lato', Helvetica, sans-serif;
+  color: #333447;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+.blue {
+    padding: 40px;
+    background-color: #2ab;
+}
+
+.red {
+    padding: 40px;
+    background-color: tomato;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1000px;
+}

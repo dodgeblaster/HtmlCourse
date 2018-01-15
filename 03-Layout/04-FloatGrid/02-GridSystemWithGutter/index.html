@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+    <body>
+        <div class="wrapper">
+
+            <h1>CSS Grid System</h1>
+            <hr>
+
+
+            <div class="row">
+
+                <div class="small-12 medium-6 large-4 column blue">
+                    <p>Block</p>
+                </div>
+                <div class="small-12 medium-6 large-8 column red">
+                    <p>Block</p>
+                </div>
+
+                <div class="small-12 medium-12 large-6 column blue visible-for-medium-and-up">
+                    <p>Block</p>
+                </div>
+                <div class="small-12 medium-6 large-3 column red">
+                    <p>Block</p>
+                </div>
+
+                <div class="small-12 medium-6 large-3 column blue">
+                    <p>Block</p>
+                </div>
+            </div>
+
+        </div>
+        <script type="text/javascript">
+
+
+        function printStyles(size, margin) {
+            const widthWithMargin       = 100 / 12
+            const widthWithoutMargin    = 100 / 12 - margin
+            const integerToWidth        = i => (widthWithMargin * i + widthWithoutMargin)
+            const widthToCssStatement   = (x, i) => `.${size}-${i + 1} { width: ${x}%; }`
+            const printStyle            = x => { return console.log(x)}
+            const printSpace            = x => { return console.log('')}
+
+            [0,1,2,3,4,5,6,7,8,9,10,11]
+                .map(integerToWidth)
+                .map(widthToCssStatement)
+                .forEach(printStyle)
+
+            printSpace()
+        }
+
+        printStyles('small', 2)
+        printStyles('medium', 2)
+        printStyles('large', 2)
+        </script>
+
+    </body>
+</html>
